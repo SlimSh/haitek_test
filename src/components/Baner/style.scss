@@ -1,0 +1,45 @@
+@import '../../assets/scss/params.scss';
+
+:local .banner {
+  min-height: 400px;
+  margin: 0 auto;
+  background: black url(./img/banner.jpg) no-repeat right bottom;
+  padding: 0px;
+  overflow: hidden;
+  display: flex;
+  @media only screen and (max-width: $max-width) {
+    height: auto;
+  }
+  @media only screen and (max-width: $mobile-width) {
+    background: black;
+  }
+}
+:local .content {
+  max-width: 621px;
+  margin: auto auto auto 90px;
+  @media only screen and (max-width: $max-width) {
+    margin: 20px;
+  }
+  @media only screen and (max-width: $tablet-width) {
+    max-width: calc(100% - 250px);
+  }
+  @media only screen and (max-width: $mobile-width) {
+    max-width: 100%;
+  }
+  h1 {
+    color: $color-text-white;
+    font-size: 40px;
+    @media only screen and (max-width: $mid-width) {
+      font-size: 28px;
+      line-height: 1.3em;
+    }
+  }
+  p {
+    color: $color-text-middle-gray;
+    font-size: 26px;
+    @media only screen and (max-width: $mid-width) {
+      font-size: 18px;
+      line-height: 1.2em;
+    }
+  }
+}

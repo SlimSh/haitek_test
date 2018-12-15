@@ -1,0 +1,50 @@
+@import '../../assets/scss/params.scss';
+
+:local {
+  .footer {
+    height: 78px;
+    background: $color-bg-mid-black;
+    font-size: 13px;
+    @media only screen and (max-width: $tablet-width) {
+      height: auto;
+    }
+    :global .section-center {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px 10px 0px 10px;
+      @media only screen and (max-width: $tablet-width) {
+        flex-direction: column;
+      }
+      ul {
+        width: 300px;
+      }
+      div {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        max-width: 450px;
+        margin-top: -10px;
+        span {
+          display: inline-block;
+          background: $color-16-bg;
+          color: $color-16-text;
+          width: 36px;
+          height: 36px;
+          text-align: center;
+          line-height: 36px;
+          border-radius: 50%;
+          margin-top: 12px;
+        }
+        p {
+          display: inline-block;
+        }
+      }
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+  }
+}

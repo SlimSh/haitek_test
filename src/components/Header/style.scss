@@ -1,0 +1,11 @@
+@import '../../assets/scss/params.scss';
+
+:local .header {
+  background: $color-bg-black;
+  div {
+    img {
+      max-width: 211px;
+      cursor: pointer;
+    }
+  }
+}

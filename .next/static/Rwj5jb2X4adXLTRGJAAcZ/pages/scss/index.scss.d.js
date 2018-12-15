@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{261:function(n,s,t){__NEXT_REGISTER_PAGE("/scss/index.scss.d",function(){return n.exports=t(262),{page:n.exports.default}})},262:function(n,s,t){"use strict";t.r(s),t.d(s,"list",function(){})}},[[261,0]]]);

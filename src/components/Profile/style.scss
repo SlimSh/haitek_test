@@ -1,0 +1,29 @@
+@import '../../assets/scss/params.scss';
+:local .profile {
+  h1 {
+    font-size: 30px;
+  }
+  .list_share {
+    display: flex;
+    justify-content: space-around;
+    @media only screen and (max-width: $mid-width) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}
+:local .btn_share {
+  font-size: 14px;
+  text-align: center;
+  min-width: 80px;
+  width: 140px;
+  height: 42px;
+  padding: 0px;
+  line-height: 42px;
+  a {
+    text-decoration: none;
+    color: $color-text-white;
+  }
+
+}

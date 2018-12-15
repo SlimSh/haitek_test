@@ -1,0 +1,11 @@
+:local .list {
+  font-size: 14px;
+  li {
+    display: flex;
+    &::before {
+      content: '-';
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}

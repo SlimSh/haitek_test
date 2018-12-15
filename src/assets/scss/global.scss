@@ -1,0 +1,85 @@
+@import './params.scss';
+@import './fonts.scss';
+
+body {
+  font-family: 'Ibmplexsanslight', 'Tahoma';
+  background: $color-bg;
+  color: $color-text-default;
+  font-size: 19px;
+  line-height: 1.37;
+}
+
+.btn {
+  border-radius: 3px;
+  background-color: #ffffff;
+  width: auto;
+  min-width: 180px;
+  text-align: center;
+  padding: 15px 10px;
+  display: inline-block;
+
+  cursor: pointer;
+  transition: all .5s;
+  &:hover {
+    background: $color-bg-grey;
+    color: $color-text-orange;
+  }
+}
+
+.section-center {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 20px 0px; 
+  clear: both;
+  @media only screen and (max-width: $max-width) {
+    padding: 20px;
+  }
+  &--content {
+    max-width: $mid-width;
+  }
+}
+.show-all-screen {
+  display: flex;
+  text-align: center;
+  min-height: calc(100vh - 161px);
+  .section-center {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+}
+.content {
+  background: white;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ibmplexsansmedium', 'Tahoma';
+  font-weight: 100;
+}
+h2 {
+  font-size: 32px;
+}
+h4 {
+  margin-bottom: 10px;
+}
+.orange {
+  color: $color-text-orange;
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  li {
+    margin-bottom: 10px;
+  }
+}
+strong {
+  font-family: 'Ibmplexsansmedium', 'Tahoma';
+
+}
+
+a {
+  color: rgba($color-text-default, .8);
+  &:hover {
+    color: $color-text-default
+  }
+}
