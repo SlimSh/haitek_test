@@ -21,7 +21,6 @@ class Auth extends Component {
         this.checkFbAuth(token)
       case 'google':
         this.checkGoogleAuth(token)
-        break;
       default:
       Router.push('/');
     

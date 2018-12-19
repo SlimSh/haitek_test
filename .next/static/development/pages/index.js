@@ -4467,18 +4467,6 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime-module.js");
-
-
-/***/ }),
-
 /***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
@@ -19250,25 +19238,13 @@ function (_Component) {
 /*!************************!*\
   !*** ./src/actions.ts ***!
   \************************/
-/*! exports provided: getAllUsers, removeUser, signUp, auth, setUserStoreLocale, getUserStoreLocale */
+/*! exports provided: setUserStoreLocale, getUserStoreLocale */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAllUsers", function() { return getAllUsers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeUser", function() { return removeUser; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUp", function() { return signUp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "auth", function() { return auth; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUserStoreLocale", function() { return setUserStoreLocale; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserStoreLocale", function() { return getUserStoreLocale; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 function dfPO(data) {
   return {
     method: 'POST',
@@ -19278,142 +19254,8 @@ function dfPO(data) {
     },
     body: JSON.stringify(data)
   };
-} //TODO Delete this
-
-
-function getAllUsers() {
-  return _getAllUsers.apply(this, arguments);
-}
-
-function _getAllUsers() {
-  _getAllUsers = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-    var users;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return fetch("/users/all");
-
-          case 2:
-            users = _context.sent;
-            return _context.abrupt("return", users.json());
-
-          case 4:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee, this);
-  }));
-  return _getAllUsers.apply(this, arguments);
-}
-
-;
-function removeUser(_x) {
-  return _removeUser.apply(this, arguments);
-}
-
-function _removeUser() {
-  _removeUser = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(_id) {
-    var rawResponse, result;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return fetch('users/remove', dfPO({
-              id: _id
-            }));
-
-          case 2:
-            rawResponse = _context2.sent;
-            _context2.next = 5;
-            return rawResponse.json();
-
-          case 5:
-            result = _context2.sent;
-            return _context2.abrupt("return", result);
-
-          case 7:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2, this);
-  }));
-  return _removeUser.apply(this, arguments);
-}
-
-;
-function signUp(_x2) {
-  return _signUp.apply(this, arguments);
-}
-
-function _signUp() {
-  _signUp = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(user) {
-    var addUserReq, result;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            _context3.next = 2;
-            return fetch('auth/signUp', dfPO(user));
-
-          case 2:
-            addUserReq = _context3.sent;
-            _context3.next = 5;
-            return addUserReq.json();
-
-          case 5:
-            result = _context3.sent;
-            return _context3.abrupt("return", result);
-
-          case 7:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3, this);
-  }));
-  return _signUp.apply(this, arguments);
-}
-
-function auth(_x3) {
-  return _auth.apply(this, arguments);
 } //TODO END Delete this
 
-function _auth() {
-  _auth = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(data) {
-    var addUserReq;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
-      while (1) {
-        switch (_context4.prev = _context4.next) {
-          case 0:
-            _context4.next = 2;
-            return fetch('/auth', dfPO(data));
-
-          case 2:
-            addUserReq = _context4.sent;
-            return _context4.abrupt("return", addUserReq);
-
-          case 4:
-          case "end":
-            return _context4.stop();
-        }
-      }
-    }, _callee4, this);
-  }));
-  return _auth.apply(this, arguments);
-}
 
 var setUserStoreLocale = function setUserStoreLocale(user) {
   localStorage.setItem('token', user.token);

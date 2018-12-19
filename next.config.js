@@ -13,25 +13,23 @@ const cssOption = {
   should: true,
   cssLoaderOptions: {
     sourceMap: true,
-    localIdentName: '[local]___[hash:base64:5]',
-    importLoaders: 2,
-    modules: true,
+    localIdentName: '[name]__[hash:base64:5]',
+    // importLoaders: 2,
+    modules: true
   }
 };
 const fontOption = {
   enableSvg: true,
 }
 
-const typeOption = {
 
-};
 module.exports = withPlugins([
   // withCSS,
   [withFonts, fontOption],
 
-  withSass,
-  withCSS,
+  [withSass, cssOption],
+  [withCSS],
   withImages,
   // withWorkers,
-  [withTypescript, typeOption]
+  withTypescript
 ]);
